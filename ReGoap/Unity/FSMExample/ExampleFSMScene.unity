@@ -335,8 +335,8 @@ MonoBehaviour:
     MaxIterations: 100000
     MaxNodesToExpand: 100000
     UsingDynamicActions: 1
-    DebugPlan: 0
-  LogLevel: 0
+    DebugPlan: 1
+  LogLevel: -1
   NodeWarmupCount: 100000
   StatesWarmupCount: 1000000
 --- !u!4 &22340367
@@ -9715,7 +9715,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 884770e97ce814c43b1f204490bf74c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BuildersCount: 5
+  BuildersCount: 1
   BuilderPrefab: {fileID: 1125005807267310, guid: 3b8d017b7fea5bb45bd85faf2f15bd5a, type: 3}
   DelayBetweenSpawns: 0.133
   AgentsPerSpawn: 1
