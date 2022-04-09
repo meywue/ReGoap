@@ -15,7 +15,7 @@ namespace ReGoap.Unity.Editor.Test
             // from: http://stackoverflow.com/questions/1047218/benchmarking-small-code-samples-in-c-can-this-implementation-be-improved
             //Process.GetCurrentProcess().PriorityClass = ProcessPriorityClass.High;
             //Thread.CurrentThread.Priority = ThreadPriority.Highest;
-            // warm up 
+            // warm up
             func();
 
             var watch = new Stopwatch();
@@ -42,7 +42,8 @@ namespace ReGoap.Unity.Editor.Test
             return watch.Elapsed.TotalMilliseconds;
         }
 
-        [TestFixtureSetUp]
+        // [TestFixtureSetUp]
+        [OneTimeSetUpAttribute]
         public void Init()
         {
             tests = new ReGoapTests();
