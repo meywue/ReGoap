@@ -55,7 +55,7 @@ can be defined as a list of preconditions and effects, these are the actions tha
 
 The preconditions are the requirement that the Action requires to be ran, described as a State, the effects, as the name implies, are the effects of the Action, as well described as a State.
 
-Examples: 
+Examples:
 
 * *'Open door': [pre: {'nearDoor': true, 'doorUnlocked': true}, effects: {'doorOpened': true}]*
 * *'Close combat attack': [pre: {'weaponEquipped': true, 'isAt': 'enemy'}, effects: {'hurtEnemy' true}]*
@@ -83,7 +83,7 @@ is the memory of the Agent, everything the Agent knows and feel should be insert
 #### Sensor
 is a memory helper, it should handle a specific scope.
 
-Example: 
+Example:
 * *EyeSensor (check if an enemy is in line of sight)*
 * *EarsSensor (check if an enemy has been heard, you could make a single EnemySensor which has EyeSensor and EarsSensor of course)*
 
@@ -115,7 +115,7 @@ Check out the actions in this example: https://github.com/luxkun/ReGoap/tree/mas
 Check out ReGoapAction implementation, to see what functions you can override: https://github.com/luxkun/ReGoap/blob/master/ReGoap/Unity/ReGoapAction.cs
 
 You must implement your own ReGoapAction by implementing IReGoapAction interface or inheriting ReGoapAction.
-Choose wisely the generic types, they must be the same across all the classes of the agent. 
+Choose wisely the generic types, they must be the same across all the classes of the agent.
 Usually string, object is the most generic, also int/enum, object is as well generic but lighter.
 
 For a simple implementation all you have to do is this:
@@ -195,7 +195,7 @@ public class MySensor : ReGoapSensor<string, object>
 }
 ```
 
-*Note*: make sure to use ReGoapMemoryAdvanced when working with sensors, since the basic class does not check and update sensors. 
+*Note*: make sure to use ReGoapMemoryAdvanced when working with sensors, since the basic class does not check and update sensors.
 
 ---
 
@@ -212,3 +212,6 @@ Now if you click on any agent in your scene (while playing, works only on runnin
 
 ## Pull Requests
 Any pull request is appreciated, just make sure to check Unity Tests (menu **Window** -> **Editor Tests Runner** -> **Run All**) before committing and to keep the same style of code.
+
+## meywue notes
+Edit -> Project Settings -> Player -> Api Compatibility Level has to be set to `.NET Framework`.
